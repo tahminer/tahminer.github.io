@@ -1,0 +1,171 @@
+/* Cyberpunk Hacker Theme with Side-by-Side Profile Pic */
+body {
+  font-family: 'Fira Code', monospace;
+  background-color: #0d1117;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(90deg, #1a1a2e, #0f3460);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #ff00c8;
+  animation: glowFade 6s ease-in-out infinite alternate;
+}
+
+.header-text {
+  text-align: left;
+  max-width: 600px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #ff00c8;
+  font-size: 1.1rem;
+}
+
+nav {
+  background-color: #161b22;
+  padding: 0.8rem 0;
+  text-align: center;
+  border-bottom: 1px solid #30363d;
+}
+
+nav a {
+  color: #9d4edd;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  border-left: 4px solid #ff00c8;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  color: #ff00c8;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #ff00c8;
+}
+
+ul li {
+  margin-bottom: 0.8rem;
+  color: #e0e0e0;
+}
+
+code {
+  background-color: #161b22;
+  color: #00ffff;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+a {
+  color: #9d4edd;
+}
+
+a:hover {
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+footer {
+  background-color: #010409;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #ff00c8;
+  border-top: 1px solid #30363d;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #ff00c8;
+  box-shadow: 0 0 15px #ff00c8;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.photo-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #9d4edd;
+  box-shadow: 0 0 10px #00ffff44;
+  transition: transform 0.3s ease;
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffff88;
+}
+/* Typewriter Blinking Cursor */
+header h1::after {
+  content: "|";
+  animation: blink 1s infinite;
+  margin-left: 5px;
+  color: #ff00c8;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes glowFade {
+  from { box-shadow: 0 0 10px #ff00c8; }
+  to { box-shadow: 0 0 30px #00ffff; }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+}
